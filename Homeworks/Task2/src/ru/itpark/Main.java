@@ -14,6 +14,6 @@ public class Main {
         int b = in.nextInt();
         sum -=b;
     }
-        System.out.println("Пропущен число " + sum);
+        System.out.println("Пропущено число " + sum);
     }
 }
