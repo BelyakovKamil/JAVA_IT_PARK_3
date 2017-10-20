@@ -3,11 +3,7 @@ package ru.itpark;
 public class TV {
     private Channel channels[];
 
-    Channel channel_1 = new Channel("1 Канал");
-    Channel channel_2 = new Channel("Россия 1");
-    Channel channel_3 = new Channel("Россия 2");
-    Channel channel_4 = new Channel("Росссия 24");
-    Channel channel_5 = new Channel("СТС");
+
 
 
     public static void showMenu() {

@@ -3,9 +3,11 @@ package ru.itpark;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Нажмите кнопку на пульте от 1 - 5");
-        while (true){
+        Program firstChanel[]= new Program[1];
 
-        }
+
+        Channel channel= new Channel("1 Kanal",1, firstChanel);
+        channel.getPrograms();
+
     }
 }

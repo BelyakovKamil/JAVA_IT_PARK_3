@@ -6,5 +6,11 @@ package ru.itpark;
 public class RemoteController {
     private TV tv;
 
+    public TV getTv() {
+        return tv;
+    }
 
+    public void setTv(TV tv) {
+        TV.showMenu();
+    }
 }
