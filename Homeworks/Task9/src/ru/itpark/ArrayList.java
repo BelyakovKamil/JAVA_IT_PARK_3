@@ -1,7 +1,7 @@
 package ru.itpark;
 
 
-import com.sun.xml.internal.bind.v2.TODO;
+
 
 public class ArrayList implements List {
     private static final int MAX_SIZE = 10;

@@ -1,0 +1,4 @@
+
+@Ge
+public class CrudDAO {
+}

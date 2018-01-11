@@ -1,0 +1,59 @@
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(50),
+    password VARCHAR(50)
+);
+
+CREATE TABLE users_profile(
+	id SERIAL PRIMARY KEY,
+	firstname VARCHAR (255),
+	lastname VARCHAR (255),
+     	birthday DATE,
+	phonenumber VARCHAR(20),
+	users_id INTEGER,
+	FOREIGN KEY(users_id) REFERENCES users(id)
+);
+
+CREATE TABLE employee_profile(
+	id SERIAL PRIMARY KEY,
+	emp_book BOOLEAN,	
+	work_exp INTEGER,
+	med_book BOOLEAN,
+	rating INTEGER,
+	users_profile_id INTEGER,
+	FOREIGN KEY(users_profile_id) REFERENCES users_profile(id)
+);
+
+CREATE TABLE location_of_organization(
+	id SERIAL PRIMARY KEY,
+	country VARCHAR(50),
+	subject_of_country VARCHAR(50),
+	city VARCHAR(50),
+	adress VARCHAR(50),
+	index INTEGER
+);
+
+CREATE TABLE organization_of_employer(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(255),
+	phonenumber VARCHAR(20),
+	rating INTEGER,
+	date_of_creation DATE,
+	site VARCHAR(255),
+	location_id INTEGER,
+	FOREIGN KEY (location_id) REFERENCES location_of_organization(id)
+);
+	 
+
+CREATE TABLE employer_profile(
+	id SERIAL PRIMARY KEY,
+	org_name VARCHAR(255),
+	rating INTEGER,
+	org_id INTEGER,
+	FOREIGN KEY (org_id) REFERENCES organization_of_employer(id),
+	users_profile_id INTEGER,
+	FOREIGN KEY(users_profile_id) REFERENCES users_profile(id)
+);
+	
+	
