@@ -1,4 +1,11 @@
 package ru.itpark.dao;
 
-public interface UsersDao {
+import java.util.List;
+
+public interface UsersDao extends CrudDao<UsersDao> {
+//    List<UsersDao>
+//    List<UsersDao>
+//    List<UsersDao>
+//    List<UsersDao>
+//    List<UsersDao>
 }

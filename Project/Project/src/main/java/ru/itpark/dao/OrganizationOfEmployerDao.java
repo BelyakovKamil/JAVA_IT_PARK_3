@@ -1,4 +1,11 @@
 package ru.itpark.dao;
 
-public interface OrganizationOfEmployerDao {
+import java.util.List;
+
+public interface OrganizationOfEmployerDao extends CrudDao<OrganizationOfEmployerDao> {
+//    List<OrganizationOfEmployerDao> findAll
+//    List<OrganizationOfEmployerDao> findAll
+//    List<OrganizationOfEmployerDao> findAll
+//    List<OrganizationOfEmployerDao> findAll
+//    List<OrganizationOfEmployerDao> findAll
 }

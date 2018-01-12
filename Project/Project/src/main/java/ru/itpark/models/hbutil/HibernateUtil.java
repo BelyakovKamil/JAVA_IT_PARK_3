@@ -15,10 +15,10 @@ public class HibernateUtil {
     static {
         try {
             //Создаем новый екземпляр AnnotationConfiguration
-            AnnotationConfiguration ac = new AnnotationConfiguration().addAnnotatedClass(EmployeeProfileEntity.class);
+//            AnnotationConfiguration ac = new AnnotationConfiguration().addAnnotatedClass(EmployeeProfileEntity.class);
             //Это нам нужно для того, чтобы мы добавили все наши классы сущности.
             //каждый ваш Entity здесь нужно прописать, не пропишете - не будет работать.
-            ac.addAnnotatedClass(EmployeeProfileEntity.class)
+//            ac.addAnnotatedClass(EmployeeProfileEntity.class)
         } catch (Throwable e){
             System.err.println("Initial SessionFactory creation failed." + e);
             throw new ExceptionInInitializerError(e);
