@@ -7,12 +7,13 @@
 
     <groupId>ru.itpark</groupId>
     <dependencies>
+        <!-- основная библиотека для всех spring-библиотек -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>4.3.13.RELEASE</version>
         </dependency>
-
+        <!-- основная библиотека -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
@@ -24,11 +25,23 @@
             <artifactId>spring-context</artifactId>
             <version>4.3.13.RELEASE</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+        <!-- основная библиотекуа для всех spring-библиотек -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>4.3.13.RELEASE</version>
+        </dependency>
+        <!-- вспомогательная библиотека для работы с транзакциями -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>4.3.13.RELEASE</version>
+        </dependency>
+        <!-- библиотека для логирования -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
         </dependency>
 
         <dependency>

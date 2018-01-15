@@ -1,7 +1,5 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="ru.itpark.models.User" %>
-<%@ page import="ru.itpark.models.entity.UsersEntity" %>
-<%@ page import="org.omg.CORBA.UserException" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,16 +11,16 @@
     <tr>
         <th>Id</th>
         <th>Имя</th>
-        <th>Почта</th>
+        <th>Возраст</th>
     </tr>
     <%
-        ArrayList<UsersEntity> users = (ArrayList<UsersEntity>) request.getAttribute("users");
-        for (UsersEntity user : users) {
+        ArrayList<User> users = (ArrayList<User>) request.getAttribute("users");
+        for (User user : users) {
     %>
     <tr>
         <td><%=user.getId()%></>
         <td><%=user.getName()%></>
-        <td><%=user.getEmail()%></>
+        <td><%=user.getAge()%></>
     </tr>
     <% } %>
 </table>
