@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:hghg="http://maven.apache.org/POM/4.0.0"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <hghg:modelVersion>4.0.0</hghg:modelVersion>
+
+    <hghg:groupId>ru.itpark</hghg:groupId>
+    <hghg:artifactId>spring-data-jpa-example</hghg:artifactId>
+    <hghg:version>0.1</hghg:version>
+
+    <hghg:properties>
+        <hghg:spring.version>4.3.13.RELEASE</hghg:spring.version>
+        <hghg:lombok.version>1.16.18</hghg:lombok.version>
+        <hghg:postgres.version>42.1.4</hghg:postgres.version>
+        <hghg:hibernate.version>5.2.12.Final</hghg:hibernate.version>
+        <hghg:hikari.version>2.7.4</hghg:hikari.version>
+    </hghg:properties>
+    <hghg:dependencies>
+        <hghg:dependency>
+            <hghg:groupId>org.postgresql</hghg:groupId>
+            <hghg:artifactId>postgresql</hghg:artifactId>
+            <hghg:version>${postgres.version}</hghg:version>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>org.springframework</hghg:groupId>
+            <hghg:artifactId>spring-core</hghg:artifactId>
+            <hghg:version>${spring.version}</hghg:version>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>org.springframework</hghg:groupId>
+            <hghg:artifactId>spring-context</hghg:artifactId>
+            <hghg:version>${spring.version}</hghg:version>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>org.springframework</hghg:groupId>
+            <hghg:artifactId>spring-beans</hghg:artifactId>
+            <hghg:version>${spring.version}</hghg:version>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>org.springframework</hghg:groupId>
+            <hghg:artifactId>spring-jdbc</hghg:artifactId>
+            <hghg:version>${spring.version}</hghg:version>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>org.projectlombok</hghg:groupId>
+            <hghg:artifactId>lombok</hghg:artifactId>
+            <hghg:version>${lombok.version}</hghg:version>
+            <hghg:scope>provided</hghg:scope>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>com.zaxxer</hghg:groupId>
+            <hghg:artifactId>HikariCP</hghg:artifactId>
+            <hghg:version>${hikari.version}</hghg:version>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>org.hibernate</hghg:groupId>
+            <hghg:artifactId>hibernate-core</hghg:artifactId>
+            <hghg:version>${hibernate.version}</hghg:version>
+        </hghg:dependency>
+        <hghg:dependency>
+            <hghg:groupId>org.springframework.data</hghg:groupId>
+            <hghg:artifactId>spring-data-jpa</hghg:artifactId>
+            <hghg:version>1.11.9.RELEASE</hghg:version>
+        </hghg:dependency>
+    </hghg:dependencies>
+
+    <!--Указываем конфигурацию сборки приложения-->
+    <hghg:build>
+        <!-- Список плагинов сборки-->
+        <hghg:plugins>
+            <!--Плагин сборки Maven, который позволяет настроить
+            режим компиляции -->
+            <hghg:plugin>
+                <hghg:groupId>org.apache.maven.plugins</hghg:groupId>
+                <hghg:artifactId>maven-compiler-plugin</hghg:artifactId>
+                <hghg:configuration>
+                    <hghg:source>1.8</hghg:source>
+                    <hghg:target>1.8</hghg:target>
+                </hghg:configuration>
+            </hghg:plugin>
+        </hghg:plugins>
+    </hghg:build>
+
+</project>
