@@ -11,7 +11,6 @@
 <body>
 
 <script>
-    <!--
     function checkPP()
     {
         document.getElementById('buttonv');
@@ -28,7 +27,38 @@
 
         }
     }
-    //-->
+</script>
+<script>
+    function Contrys(){
+        document.getElementById('selectCountry');
+        document.getElementById('selectCityRussia');
+        document.getElementById('selectCityUkraine');
+        document.getElementById('selectCityBelarus');
+
+        if(selectCountry.value=="Россия"){
+            selectCityRussia.disabled=false;
+            selectCityRussia.style.display='block';
+            selectCityBelarus.disabled=true;
+            selectCityBelarus.style.display='none';
+            selectCityUkraine.disabled=true;
+            selectCityUkraine.style.display='none';
+        } else
+        if(selectCountry.value=="Беларусь"){
+            selectCityBelarus.disabled=false;
+            selectCityBelarus.style.display='block';
+            selectCityRussia.disabled=true;
+            selectCityRussia.style.display='none';
+            selectCityUkraine.disabled=true;
+            selectCityUkraine.style.display='none';
+        }else{
+            selectCityUkraine.disabled=false;
+            selectCityUkraine.style.display='block';
+            selectCityBelarus.disabled=true;
+            selectCityBelarus.style.display='none';
+            selectCityRussia.disabled=true;
+            selectCityRussia.style.display='none';
+        }
+    }
 </script>
 <!-- Основной блок сайта -->
 <div id="basic">

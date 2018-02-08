@@ -11,7 +11,6 @@
 <body>
 
 <script>
-    <!--
     function checkPP() {
         document.getElementById('buttonv');
         buttonv.disabled = true;
@@ -25,8 +24,38 @@
 
         }
     }
+</script>
+<script>
+    function Contrys(){
+        document.getElementById('selectCountry');
+        document.getElementById('selectCityRussia');
+        document.getElementById('selectCityUkraine');
+        document.getElementById('selectCityBelarus');
 
-    //-->
+        if(selectCountry.value=="Россия"){
+            selectCityRussia.disabled=false;
+            selectCityRussia.style.display='block';
+            selectCityBelarus.disabled=true;
+            selectCityBelarus.style.display='none';
+            selectCityUkraine.disabled=true;
+            selectCityUkraine.style.display='none';
+        } else
+        if(selectCountry.value=="Беларусь"){
+            selectCityBelarus.disabled=false;
+            selectCityBelarus.style.display='block';
+            selectCityRussia.disabled=true;
+            selectCityRussia.style.display='none';
+            selectCityUkraine.disabled=true;
+            selectCityUkraine.style.display='none';
+        }else{
+            selectCityUkraine.disabled=false;
+            selectCityUkraine.style.display='block';
+            selectCityBelarus.disabled=true;
+            selectCityBelarus.style.display='none';
+            selectCityRussia.disabled=true;
+            selectCityRussia.style.display='none';
+        }
+    }
 </script>
 <!-- Основной блок сайта -->
 <div id="basic">
@@ -65,11 +94,32 @@
             </select>
             <h2 align="center"> Сведения об организации</h2>
             <h4 align=center>Страна</h4>
-            <input type="text" name="country" placeholder="Страна" required pattern="[а-яА-Я]+$">
+            <#--<input type="text" name="country" placeholder="Страна" required pattern="[а-яА-Я]+$">-->
+            <select id="selectCountry" name="country" onchange="Contrys()">
+                <option>Выберите страну</option>
+                <option id="Russia" value="Россия">Россия</option>
+                <option id="Ukraine" value="Украина">Украина</option>
+                <option id="Belarus" value="Беларусь">Беларусь</option>
+            </select>
             <h4 align=center>Субъект страны</h4>
             <input type="text" name="subjectOfCountry" placeholder="Субъект страны" pattern="[а-яА-Я]+$">
             <h4 align=center>Город</h4>
-            <input type="text" name="city" placeholder="Город" required pattern="[а-яА-Я]+$">
+            <#--<input type="text" name="city" placeholder="Город" required pattern="[а-яА-Я]+$">-->
+            <select id="selectCityRussia" name="city" value="Россия" style="display:none" disabled="disabled" >
+                <option>Москва</option>
+                <option>Санкт-Петербург</option>
+                <option>Казань</option>
+            </select>
+            <select id="selectCityUkraine" name="city" value="Украина" style="display:none" disabled="disabled">
+                <option>Киев</option>
+                <option>Одесса</option>
+                <option>Харьков</option>
+            </select>
+            <select id="selectCityBelarus" name="city" value="Беларусь" style="display:none" disabled="disabled">
+                <option>Минск</option>
+                <option>Брест</option>
+                <option>Витебск</option>
+            </select>
             <h4 align=center>Адрес</h4>
             <input type="text" name="adress" placeholder="Адрес (улица,дом)" required>
             <h4 align=center>Почтовый индекс</h4>
