@@ -8,7 +8,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import ru.itpark.news.models.FileInfo;
-import ru.itpark.news.repositories.FilesInfoRepository;
+import ru.itpark.news.repositories.FilesInfoRepositoryjj;
 import ru.itpark.news.repositories.UsersRepository;
 
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +16,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
 
@@ -24,7 +23,7 @@ import java.util.UUID;
 public class FilesServiceImpl implements FilesService {
 
     @Autowired
-    private FilesInfoRepository filesInfoRepository;
+    private FilesInfoRepositoryjj filesInfoRepository;
 
     @Autowired
     private UsersRepository usersRepository;

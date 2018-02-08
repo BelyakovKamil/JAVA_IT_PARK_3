@@ -4,14 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.itpark</groupId>
-    <artifactId>springboot-example</artifactId>
-    <version>0.1</version>
+    <groupId>com.company</groupId>
+    <artifactId>final-project</artifactId>
+    <version>0.4</version>
 
     <properties>
         <lombok.version>1.16.18</lombok.version>
         <postgres.version>42.1.4</postgres.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
+        <javaxmail.version>1.4.7</javaxmail.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
 
     <parent>
@@ -48,13 +50,16 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
-            <version>1.4.7</version>
+            <version>${javaxmail.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
     </dependencies>
 
     <!--Указываем конфигурацию сборки приложения-->

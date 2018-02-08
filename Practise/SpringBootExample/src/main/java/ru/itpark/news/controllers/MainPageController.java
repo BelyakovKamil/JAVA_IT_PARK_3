@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import ru.itpark.news.models.User;
 import ru.itpark.news.services.AuthenticationService;
 
+
 @Controller
 public class MainPageController {
 
@@ -17,7 +18,8 @@ public class MainPageController {
 
     @GetMapping("/")
     public String getMainPage(Authentication authentication,
-                              @ModelAttribute("model") ModelMap model) {
+                              @ModelAttribute("model") ModelMap model)
+ {
         if (authentication != null) {
             User user = authenticationService.getUserByAuthentication(authentication);
             model.addAttribute("user", user);

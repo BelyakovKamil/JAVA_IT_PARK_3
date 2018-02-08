@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>News- Регистрация</title>
-    <script type="text/javascript" src="/js/form_script.js"></script>
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
     <br>
     <input type="password" name="password" placeholder="Пароль"/>
     <br>
-    <textarea name="description" onkeyup="adjust_textarea(this)"></textarea>
+
     <input type="submit"/>
 </form>
 </body>

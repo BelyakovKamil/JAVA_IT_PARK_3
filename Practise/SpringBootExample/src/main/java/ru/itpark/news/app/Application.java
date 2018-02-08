@@ -17,7 +17,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(basePackages = "ru.itpark.news")
 //говорим, где лежат классы, котрые будут
 //объектом взаимодействия с бд
-@EntityScan(basePackages = "ru.itpark.ru.itpark.news.models")
+@EntityScan(basePackages = "ru.itpark.news.models")
 //говорим, что наши репозитории описаны в данном пакете
 //Spring JPA сам сгенерирует для них реализацию
 @EnableJpaRepositories(basePackages = "ru.itpark.news.repositories")

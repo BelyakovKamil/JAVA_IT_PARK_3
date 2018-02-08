@@ -3,6 +3,7 @@ package ru.itpark.news.services;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -50,6 +51,15 @@ public class RegistrationServiceImpl implements RegistrationService {
         usersRepository.save(newUser);
 
         String text = "<a href=\"localhost/confirm/" +newUser.getConfirmCode()+ "\">Пройдите по ссылке</a>";
+
+//        JavaMailSenderImpl sender=new JavaMailSenderImpl();
+//        sender.setHost("smtp.gmail.com");
+//        MimeMessage message=sender.createMimeMessage();
+//        MimeMessageHelper helper=new MimeMessageHelper(message);
+//        helper.setFrom("project.belyakov@gmail.com");
+//        helper.setTo("belyakov.kamil@mail.ru");
+//        helper.setText(text);
+//        sender.send(message);
 
         MimeMessage message = javaMailSender.createMimeMessage();
         message.setContent(text, "text/html");

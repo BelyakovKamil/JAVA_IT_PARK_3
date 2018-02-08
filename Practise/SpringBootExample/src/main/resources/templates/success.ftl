@@ -8,6 +8,6 @@
 <body>
 <#include 'common/header.ftl'/>
 <h1>Поздравляем, письмо для подтверждения регистрации отправлено на
-    - ${model.email}</h1>
+    </h1>
 </body>
 </html>

@@ -17,7 +17,7 @@ public class FileInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name="owner_id")
     private User owner;
 
