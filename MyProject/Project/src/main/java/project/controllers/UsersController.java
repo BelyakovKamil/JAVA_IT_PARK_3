@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import project.forms.UsersForm;
 
 import project.models.Users;
+import project.models.UsersProfile;
 import project.services.AuthenticationService;
 import project.services.UsersService;
 
@@ -27,7 +28,9 @@ public class UsersController {
     public String getProfilePage(@ModelAttribute("model")ModelMap model,
                                  Authentication authentication){
         Users user = authenticationService.getUserByAuthentication(authentication);
+//        UsersProfile usersProfile=authenticationService.getUsersProfileAuthenfication(authentication);
         model.addAttribute("user", user);
+//        model.addAttribute("usersProfile", usersProfile);
         return "profile";
     }
 

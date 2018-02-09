@@ -61,6 +61,13 @@ public class PagesController {
         return "registration";
     }
 
+    @GetMapping("/logout")
+    public String logout(@ModelAttribute("model") ModelMap model,
+        @RequestParam(value = "error", required = false) Boolean error) {
+                model.addAttribute("error", false);
+            return "login";
+    }
+
 //    @GetMapping("/success")
 //    public  String getSuccessPage (Authentication authentication, @ModelAttribute("model")ModelMap model){
 //        if (authentication != null){
@@ -70,16 +77,16 @@ public class PagesController {
 //        return "success_employee";
 //    }
 
-    @GetMapping("/login")
-    public String login(
-            @ModelAttribute("model") ModelMap model,
-            @RequestParam(value = "error", required = false) Boolean error) {
-        if (error != null) {
-            model.addAttribute("error", true);
-        } else {
-            model.addAttribute("error", false);
-        }
-        return "login";
-    }
+//    @GetMapping("/login")
+//    public String login(
+//            @ModelAttribute("model") ModelMap model,
+//            @RequestParam(value = "error", required = false) Boolean error) {
+//        if (error != null) {
+//            model.addAttribute("error", true);
+//        } else {
+//            model.addAttribute("error", false);
+//        }
+//        return "login";
+//    }
 
 }

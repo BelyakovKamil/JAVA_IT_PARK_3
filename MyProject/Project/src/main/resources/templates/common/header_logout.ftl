@@ -8,11 +8,12 @@
     <div id="top-menu">
         <div class="bg-1">
             <ul>
-                <li><a href="/">Выход</a></li>
+                <li><a href="/profile">Профиль</a></li>
                 <li><a href="/find/">Поиск</a></li>
                 <li><a href="/about">О проекте</a></li>
                 <li><a href="/reviews">Отзывы</a></li>
-                <li class="none-bg"><a href="/contacts">Контакты</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+                <li class="none-bg"><a href="/logout">Выход</a></li>
             </ul>
         </div>
         <div class="bg-2"></div>

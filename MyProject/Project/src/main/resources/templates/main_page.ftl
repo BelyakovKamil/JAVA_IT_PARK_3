@@ -14,23 +14,35 @@
     <!-- Шапка сайта и Верхнее меню сайта -->
     <#if model.user??>
         <#include 'common/header_logout.ftl'/>
+    <!--Контент -->
+                <div id="content">
+                    <div>
+                        <h1 align="center">Приветствуем Вас, ${model.user.name}, на сайте <span style="font-family:Willful"><a
+                                href="/">Jobik.ru</a></span></h1>
+                    </div>
+                </div>
+            <div class="myclr"></div>
+        <!-- Подвал -->
+        <#include 'common/footer.ftl'/>
     <#else>
         <#include 'common/header_login.ftl'/>
+                <!--Контент -->
+                <div id="content">
+                    <div>
+                        <h1 align="center">Приветствуем Вас на сайте <span style="font-family:Willful"><a
+                                href="/">Jobik.ru</a></span></h1>
+                        <p>Если Вы молодой и энергичный и Вам очень нужна работа, то наш сайт то, что Вам нужно! В нашей
+                            базе данных
+                            сотни работодателей, котором, возможно, нужны именно Вы! </p>
+                        <p>А если Вам нужны работники, то Вам тоже круно повезло! В на шей базе данных также имеются
+                            люди, которые
+                            хотят поработать на Вас</p>
+                    </div>
+                </div>
+            <div class="myclr"></div>
+        <!-- Подвал -->
+        <#include 'common/footer.ftl'/>
     </#if>
-    <!--Контент -->
-    <div id="content">
-        <div>
-            <h1 align="center">Приветствуем Вас на сайте <span style="font-family:Willful"><a
-                    href="/">Jobik.ru</a></span></h1>
-            <p>Если Вы молодой и энергичный и Вам очень нужна работа, то наш сайт то, что Вам нужно! В нашей базе данных
-                сотни работодателей, котором, возможно, нужны именно Вы! </p>
-            <p>А если Вам нужны работники, то Вам тоже круно повезло! В на шей базе данных также имеются люди, которые
-                хотят поработать на Вас</p>
-        </div>
-    </div>
-    <div class="myclr"></div>
-    <!-- Подвал -->
-<#include 'common/footer.ftl'/>
 </div>
 </body>
 </html>

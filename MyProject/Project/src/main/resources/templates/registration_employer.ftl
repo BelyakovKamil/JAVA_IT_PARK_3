@@ -139,7 +139,7 @@
             <input type="password" name="password" id="pass" placeholder="Пароль (минимум 6 символов из букв и цифр)"
                    required pattern="[a-zA-Z0-9]{6,30}">
             <h4 align=center>Повторите пароль</h4>
-            <input type="password" name="password" id="conf" placeholder="Повторите пароль" required
+            <input type="password" name="confirmpassword" id="conf" placeholder="Повторите пароль" required
                    pattern="[a-zA-Z0-9]{6,30}" onblur="checkPP()">
             <br>
             <br>

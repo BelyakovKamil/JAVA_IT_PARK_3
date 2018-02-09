@@ -16,3 +16,20 @@ function uploadFile(file) {
         }
     })
 }
+
+// function updateProfile(name, lastname) {
+//     $.ajax({
+//         type: "POST",
+//         url:"/users/${model.user.id}",
+//         data:{
+//             "name": name,
+//             "lastname": lastname,
+//         },
+//         error: function (data) {
+//             alert(data.status)
+//         },
+//         succes: function (data) {
+//             alert("Профиль был успешно изменен")
+//         }
+//     })
+// }
