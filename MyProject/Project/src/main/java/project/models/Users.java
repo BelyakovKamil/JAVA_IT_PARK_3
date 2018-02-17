@@ -3,6 +3,7 @@ package project.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,10 +26,16 @@ public class Users {
     private LocalDateTime registrationTime;
     private String confirmCode;
     private LocalDateTime expiredDate;
+    private String lastname;
+    private Date birthday;
+    private String phonenumber;
 
     @Enumerated(value = EnumType.STRING)
     private State state;
 
     @Enumerated(value = EnumType.STRING)
     private Role role;
+
+    @OneToOne(mappedBy = "users")
+    private UsersProfile usersProfile;
 }

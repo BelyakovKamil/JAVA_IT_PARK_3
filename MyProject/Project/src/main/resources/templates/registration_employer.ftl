@@ -129,8 +129,8 @@
             <h4 align=center>Телефон организации</h4>
             <input type="text" name="orgPhonenumber" placeholder="Телефон организации (+7...) (8...)"
                    pattern="(\+7|8)9[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}">
-            <h4 align=center>Рейтинг организации</h4>
-            <input type="number" name="orgRaiting" placeholder="Рейтинг организации">
+            <#--<h4 align=center>Рейтинг организации</h4>-->
+            <#--<input type="number" name="orgRaiting" placeholder="Рейтинг организации">-->
             <h4 align=center>Дата создания организации</h4>
             <input type="date" name="dateOfCreation" placeholder="Дата создания">
             <h4 align=center>Сайт организации</h4>

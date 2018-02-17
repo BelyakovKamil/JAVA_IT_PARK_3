@@ -27,6 +27,11 @@ public class OrganizationOfEmployer {
     private String site;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "location_id")
-    private LocationOfOrganization locationId;
+    @JoinColumn(name = "employer_profile_id")
+    private EmployerProfile employerProfile;
+
+    @OneToOne(mappedBy = "organizationOfEmployer")
+    LocationOfOrganization locationOfOrganization;
+
+
 }

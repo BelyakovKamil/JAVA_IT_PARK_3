@@ -5,7 +5,7 @@
 
 /*Каркас сайта*/
 body {padding:0px; margin:0; background:#512D05; font-size:14px; font-family:Arial, Sans-serif; }
-#basic {width:960px; min-height:500px; margin:0 auto; padding:20px 20px 9px 20px; background:#fff;}
+#basic {width:1100px; min-height:500px; margin:0 auto; padding:20px 20px 9px 20px; background:#fff;}
 
 p a{	color:#4c281e;text-decoration:underline;}
 p a:hover{text-decoration:none;}
@@ -20,9 +20,9 @@ li.none-bg {background:none!important;}
 
  
 /*Верхнее меню сайта*/
-#top-menu {width:960px; height:74px; }
-.bg-1 {width:950px; height:64px; background:#4c281e url(../img/m1.png) repeat-x; padding:0 0 0 10px;}
-.bg-2 {width:940px; height:8px; background:#ff9c00; margin:0 auto;}
+#top-menu {width:1080px; height:74px; }
+.bg-1 {width:1090px; height:64px; background:#4c281e url(../img/m1.png) repeat-x; padding:0 0 0 10px;}
+.bg-2 {width:1080px; height:8px; background:#ff9c00; margin:0 auto;}
 .bg-1 ul {margin:0; padding:0; list-style:none;}
 .bg-1 ul li {float:left; background:url(../img/m2.png) no-repeat right center; padding:0 2px 0 0;}
 .bg-1 ul li a {display:block; height:40px; padding:24px 27px 0 27px; color:#ff9c00; text-decoration:none; text-transform:uppercase;}
@@ -136,7 +136,7 @@ th:last-child {
 }
 td {
     vertical-align: middle;
-    padding: 10px;
+    padding: 0.65em;
     font-size: 14px;
     text-align: center;
     border-top: 2px solid #4c281e;

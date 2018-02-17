@@ -68,6 +68,15 @@ public class PagesController {
             return "login";
     }
 
+//    @GetMapping("/find")
+//    public String getFindPage (@ModelAttribute("model")ModelMap model, Authentication authentication){
+////        if (authentication != null){
+////            Users user = authenticationService.getUserByAuthentication(authentication);
+////            model.addAttribute("user", user);
+////        }
+//        return "find";
+//    }
+
 //    @GetMapping("/success")
 //    public  String getSuccessPage (Authentication authentication, @ModelAttribute("model")ModelMap model){
 //        if (authentication != null){

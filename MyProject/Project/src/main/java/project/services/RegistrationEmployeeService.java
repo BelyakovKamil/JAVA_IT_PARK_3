@@ -13,5 +13,5 @@ public interface RegistrationEmployeeService {
      */
 String registration(RegistrationForm form);
 
-    boolean confirm(String confirmString);
+
 }

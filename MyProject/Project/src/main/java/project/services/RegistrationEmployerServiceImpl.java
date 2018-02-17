@@ -2,20 +2,14 @@ package project.services;
 
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import project.forms.RegistrationForm;
-import project.forms.UsersProfileForm;
 import project.models.*;
 import project.repositories.*;
-import project.services.RegistrationEmployerService;
 
-import javax.mail.internet.MimeMessage;
 import java.time.LocalDateTime;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -53,7 +47,7 @@ public class RegistrationEmployerServiceImpl implements RegistrationEmployerServ
                 .confirmCode(confirmString)
                 .expiredDate(LocalDateTime.now().plusHours(3))
                 .email(form.getEmail())
-                .role(Role.USER)
+                .role(Role.EMPLOYER)
                 .state(State.CONFIRMED)
                 .hashPassword(hashPassword)
                 .registrationTime(registrationTime)
@@ -67,17 +61,20 @@ public class RegistrationEmployerServiceImpl implements RegistrationEmployerServ
                 .birthday(form.getBirthday())
                 .phonenumber(form.getPhonenumber())
                 .build();
-        newUserProfile.setUsersId(newUser);
+        newUserProfile.setUsers(newUser);
         usersProfileRepository.save(newUserProfile);
 
-        LocationOfOrganization newLocationOfOrganization=LocationOfOrganization.builder()
-                .country(form.getCountry())
-                .subjectOfCountry(form.getSubjectOfCountry())
-                .city(form.getCity())
-                .adress(form.getAdress())
-                .postIndex(form.getPostIndex())
+        EmployerProfile newEmployerProfile=EmployerProfile.builder()
+                .organizationName(form.getOrgName())
+                .category(form.getCategory())
+                .name(form.getName())
+                .lastname(form.getLastname())
+                .birthday(form.getBirthday())
+                .phonenumber(form.getPhonenumber())
                 .build();
-        locationOfOrganizationRepository.save(newLocationOfOrganization);
+        newEmployerProfile.setUsersProfile(newUserProfile);
+        employerRepository.save(newEmployerProfile);
+
 
         OrganizationOfEmployer newOrganizationOfEmployer= OrganizationOfEmployer.builder()
                 .orgName(form.getOrgName())
@@ -86,16 +83,18 @@ public class RegistrationEmployerServiceImpl implements RegistrationEmployerServ
                 .dateOfCreation(form.getDateOfCreation())
                 .site(form.getSite())
                 .build();
-        newOrganizationOfEmployer.setLocationId(newLocationOfOrganization);
+        newOrganizationOfEmployer.setEmployerProfile(newEmployerProfile);
         organizationOfEmployerRepository.save(newOrganizationOfEmployer);
 
-        EmployerProfile newEmployerProfile=EmployerProfile.builder()
-                .organizationName(form.getOrgName())
-                .category(form.getCategory())
+        LocationOfOrganization newLocationOfOrganization=LocationOfOrganization.builder()
+                .country(form.getCountry())
+                .subjectOfCountry(form.getSubjectOfCountry())
+                .city(form.getCity())
+                .adress(form.getAdress())
+                .postIndex(form.getPostIndex())
                 .build();
-        newEmployerProfile.setUsersProfileId(newUserProfile);
-        newEmployerProfile.setOrgId(newOrganizationOfEmployer);
-        employerRepository.save(newEmployerProfile);
+        newLocationOfOrganization.setOrganizationOfEmployer(newOrganizationOfEmployer);
+        locationOfOrganizationRepository.save(newLocationOfOrganization);
 
 
 
@@ -106,24 +105,5 @@ public class RegistrationEmployerServiceImpl implements RegistrationEmployerServ
     }
 
 
-    @Override
-    public boolean confirm(String confirmString) {
-//        Optional<Users> usersOptional
-//                = usersRepository.findByConfirmCode(confirmString);
-//        if (usersOptional.isPresent()) {
-//            Users users = usersOptional.get();
-//
-//            if (LocalDateTime.now().isAfter(users.getExpiredDate())) {
-//                return false;
-//            }
-//
-//            users.setConfirmCode(null);
-//            users.setExpiredDate(null);
-//            users.setState(State.CONFIRMED);
-//            usersRepository.save(users);
-//
-//            return true;
-//        }
-        return false;
-    }
+
 }

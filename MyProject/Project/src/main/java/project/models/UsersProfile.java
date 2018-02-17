@@ -29,5 +29,11 @@ public class UsersProfile {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "users_id")
-    private Users usersId;
+    private Users users;
+
+    @OneToOne(mappedBy = "usersProfile")
+    private EmployerProfile employerProfile;
+
+    @OneToOne(mappedBy = "usersProfile")
+    private  EmployeeProfile employeeProfile;
 }

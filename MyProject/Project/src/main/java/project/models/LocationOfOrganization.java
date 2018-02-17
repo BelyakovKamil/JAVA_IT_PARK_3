@@ -24,4 +24,9 @@ public class LocationOfOrganization {
     private String city;
     private String adress;
     private int postIndex;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "organization_of_employer")
+    private OrganizationOfEmployer organizationOfEmployer;
+
 }

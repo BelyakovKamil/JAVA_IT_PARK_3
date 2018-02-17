@@ -3,6 +3,7 @@ package project.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "employee_profile")
@@ -24,10 +25,14 @@ public class EmployeeProfile {
     private String medBook;
     private int raiting;
     private String category;
+    private String name;
+    private String lastname;
+    private String phonenumber;
+    private Date birthday;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="users_profile_id")
-    private UsersProfile usersProfileId;
+    private UsersProfile usersProfile;
 
 
 

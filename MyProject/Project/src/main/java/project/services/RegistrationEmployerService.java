@@ -12,7 +12,5 @@ public interface RegistrationEmployerService {
      * @return name пользователя
      */
 String registration(RegistrationForm form);
-//String registration(UsersProfileForm form);
 
-    boolean confirm(String confirmString);
 }

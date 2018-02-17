@@ -3,7 +3,7 @@ INSERT INTO users
   SELECT
     1,
     'admin@admin.com',
-    '$2a$10$FjkmLRPsJ24FoiJ1L.Rxg.mqvoOlJ3gi4myItAk8HcKtgEeiHpNvW',
+    '$2a$04$trEtLZ7QLz5YAEdyFv8BaOxezlJC8IjrwAnaKT0rDWfrBzCud0ghm',
     'CONFIRMED',
     'ADMIN'
   WHERE

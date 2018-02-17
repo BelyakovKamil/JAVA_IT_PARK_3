@@ -11,7 +11,6 @@
                 <li><a href="/login">Вход</a></li>
                 <li><a href="/registration">Регистрация</a></li>
                 <li><a href="/about">О проекте</a></li>
-                <li><a href="/reviews">Отзывы</a></li>
                 <li class="none-bg"><a href="/contacts">Контакты</a></li>
             </ul>
         </div>

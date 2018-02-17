@@ -10,7 +10,6 @@ import java.util.Optional;
 public interface UsersRepository extends JpaRepository<Users,Long>{
     List<Users> findByOrderByRegistrationTimeDesc();
     List<Users> findByOrderById();
-    List<Users> findByOrderByIdDesc();
     List<Users> findByOrderByName();
 
     Optional<Users> findByConfirmCode(String confirmCode);
